@@ -1,5 +1,5 @@
 public class Main {
-    int foo() {
-        return 10;
-    }
+  int foo() {
+    return 10;
+  }
 }

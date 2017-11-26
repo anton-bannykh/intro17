@@ -1,14 +1,22 @@
-group 'test'
+group 'intro17'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'checkstyle'
+
+checkstyle {
+  config = resources.text.fromArchiveEntry(configurations.checkstyle.filter { it.name.contains 'checkstyle' },
+      'google_checks.xml')
+  maxWarnings = 0
+  maxErrors = 0
+}
 
 sourceCompatibility = 1.8
 
 repositories {
-    mavenCentral()
+  mavenCentral()
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+  testCompile group: 'junit', name: 'junit', version: '4.12'
 }
