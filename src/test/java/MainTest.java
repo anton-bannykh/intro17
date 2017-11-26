@@ -3,6 +3,6 @@ import org.junit.Test;
 
 public class MainTest {
     @Test public void testFoo() {
-        Assert.assertEquals(10, (new Main()).foo());
+        Assert.assertEquals(20, (new Main()).foo());
     }
 }
