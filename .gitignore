@@ -2,4 +2,5 @@
 settings.gradle
 gradlew
 build.gradle
-gradle/wrapper
+gradle/wrapper/
+gradlew.bat
