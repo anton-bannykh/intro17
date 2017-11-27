@@ -23,4 +23,12 @@ public class MainTest {
   public void testSumNegative() {
     assertEquals(-666, (new Main()).sum(new int[] {-111, -222, -333}));
   }
+
+  public static final String ERROR_TEXT = "Cannot parse integer at position %d";
+
+  @Test
+  public void testSumError() {
+    assertEquals(String.format(ERROR_TEXT, 0), (new Main()).getSumOrError(new String[] {"a"}));
+    assertEquals("0", (new Main()).getSumOrError(new String[] {"1", "2", "-3"}));
+  }
 }
