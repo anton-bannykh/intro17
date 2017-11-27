@@ -29,10 +29,4 @@ public class MainTest {
     assertEquals(0, new Main().sumPowersOf2(new int[] {31, 32, 33, Integer.MAX_VALUE}));
   }
   
-  @Test
-  public void testSumMixed() {
-    assertEquals(1227133513, 
-        new Main().sumPowersOf2(new int[] {-3, 0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33}));
-  }
-  
 }
