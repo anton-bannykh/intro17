@@ -29,4 +29,15 @@ public class MainTest {
     assertEquals(0, new Main().sumPowersOf2(new int[] {31, 32, 33, Integer.MAX_VALUE}));
   }
   
+  @Test
+  public void testInputCorrect() {
+    assertEquals("15", new Main().sumPowersOf2(new String[] {"1", "2", "3", "0"}));
+  }
+  
+  @Test
+  public void testInputIncorrect() {
+    assertEquals("Wrong input format: \"O\" is not an integer!", 
+        new Main().sumPowersOf2(new String[] {"1", "2", "3", "O"}));
+  }
+  
 }
