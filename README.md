@@ -1,4 +1,4 @@
-[![Build status](https://travis-ci.org/anton-bannykh/playground.svg?branch=master)](https://travis-ci.org/anton-bannykh/playground)
+[![Build status](https://travis-ci.org/anton-bannykh/intro17.svg?branch=master)](https://travis-ci.org/anton-bannykh/intro17)
 
 # Описание
 
