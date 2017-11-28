@@ -5,9 +5,7 @@ public class Main {
    * @param args Array of strings containing numbers
    */
   public static void main(String[] args) {
-    Main that = new Main();
-    
-    System.out.println(that.sumPowersOf2(args));
+    System.out.println(new Main().sumPowersOf2(args));
   }
 
   int foo() {
@@ -42,7 +40,7 @@ public class Main {
       }
     }
     //getting the answer
-    int answer = this.sumPowersOf2(numbers);
+    int answer = sumPowersOf2(numbers);
     return String.valueOf(answer);
   }
   
