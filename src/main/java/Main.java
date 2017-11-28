@@ -1,6 +1,5 @@
 public class Main {
 <<<<<<< HEAD
-<<<<<<< HEAD
 
   public static void main(String[] args) {
     System.out.println(median(args));
@@ -16,18 +15,19 @@ public class Main {
       }
     }
 
-=======
-  double median(int[] arr) {
->>>>>>> parent of be61d31... Task 3
     Arrays.sort(arr);
     int len = arr.length;
     if (len == 0) {
-      return 0;
+      return String.valueOf(0);
     }
     if (len % 2 == 1) {
-      return arr[len / 2];
+      return String.valueOf(arr[len / 2]);
     } else {
-      return ((double) (arr[len / 2 - 1] + arr[len / 2]) / 2);
+      if ((arr[len / 2 - 1] + arr[len / 2]) % 2 == 0) {
+        return String.valueOf((arr[len / 2 - 1] + arr[len / 2]) / 2);
+      } else {
+        return String.valueOf((double) (arr[len / 2 - 1] + arr[len / 2]) / 2);
+      }
     }
 =======
   int foo() {

@@ -3,39 +3,39 @@ import org.junit.Test;
 
 public class MainTest {
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-  double eps = 1e-9;
-  
->>>>>>> parent of be61d31... Task 3
   @Test
   public void testOddPos() {
-    int[] arr = {5, 2, 1, 4, 3};
-    Assert.assertEquals(3, (new Main()).median(arr), eps);
+    String[] arr = {"5", "2", "1", "4", "3"};
+    Assert.assertEquals("3", (new Main()).median(arr));
   }
 
   @Test
-  public void testEvenPos() {
-    int[] arr = {5, 2, 1, 4, 3, 6};
-    Assert.assertEquals(3.5, (new Main()).median(arr), eps);
+  public void testEvenPos1() {
+    String[] arr = {"5", "2", "1", "4", "3", "6"};
+    Assert.assertEquals("3.5", (new Main()).median(arr));
+  }
+
+  @Test
+  public void testEvenPos2() {
+    String[] arr = {"5", "2", "1", "7", "3", "6"};
+    Assert.assertEquals("4", (new Main()).median(arr));
   }
 
   @Test
   public void testOddNeg() {
-    int[] arr = {-5, -2, -1, -4, -3};
-    Assert.assertEquals(-3, (new Main()).median(arr), eps);
+    String[] arr = {"-5", "-2", "-1", "-4", "-3"};
+    Assert.assertEquals("-3", (new Main()).median(arr));
   }
 
   @Test
   public void testEvenNeg() {
-    int[] arr = {-5, -2, -1, -4, -3, -6};
-    Assert.assertEquals(-3.5, (new Main()).median(arr), eps);
+    String[] arr = {"-5", "-2", "-1", "-4", "-3", "-6"};
+    Assert.assertEquals("-3.5", (new Main()).median(arr));
   }
 
   @Test
   public void testNull() {
-<<<<<<< HEAD
     String[] arr = {};
     Assert.assertEquals("0", (new Main()).median(arr));
   }
@@ -49,9 +49,5 @@ public class MainTest {
   public void testFoo() {
     Assert.assertEquals(10, (new Main()).foo());
 >>>>>>> parent of d398f61... Resolved algorithm
-=======
-    int[] arr = {};
-    Assert.assertEquals(0, (new Main()).median(arr), eps);
->>>>>>> parent of be61d31... Task 3
   }
 }
