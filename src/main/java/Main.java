@@ -1,6 +1,5 @@
-import java.util.Arrays;
-
 public class Main {
+<<<<<<< HEAD
 
   public static void main(String[] args) {
     System.out.println(median(args));
@@ -30,5 +29,9 @@ public class Main {
         return String.valueOf((double) (arr[len / 2 - 1] + arr[len / 2]) / 2);
       }
     }
+=======
+  int foo() {
+    return 10;
+>>>>>>> parent of d398f61... Resolved algorithm
   }
 }
