@@ -1,3 +1,5 @@
+import java.lang.Math;
+
 public class Main {
   int foo() {
     return 10;
@@ -8,10 +10,8 @@ public class Main {
       return 0;
     }
     int ans = arr[0];
-    for (int i = 0;i < arr.length; i++) {
-      if (ans < arr[i]) {
-        ans = arr[i];
-      }
+    for (int v : arr) {
+      ans = Math.max(ans, v);
     }
     return ans;
   }
