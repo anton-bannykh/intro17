@@ -2,7 +2,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class MainTest {
-<<<<<<< HEAD
 
   @Test
   public void testOddPos() {
@@ -44,10 +43,5 @@ public class MainTest {
   public void testWrong() {
     String[] arr = {"5", "4", "kek", "-5"};
     Assert.assertEquals("You wrote not a number!", (new Main()).median(arr));
-=======
-  @Test
-  public void testFoo() {
-    Assert.assertEquals(10, (new Main()).foo());
->>>>>>> parent of d398f61... Resolved algorithm
   }
 }
