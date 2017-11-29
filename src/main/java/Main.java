@@ -1,7 +1,6 @@
 import java.util.Arrays;
 
 public class Main {
-
   public static void main(String[] args) {
     System.out.println(median(args));
   }
@@ -29,6 +28,4 @@ public class Main {
       } else {
         return String.valueOf((double) (arr[len / 2 - 1] + arr[len / 2]) / 2);
       }
-    }
-  }
 }

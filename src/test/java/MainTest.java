@@ -2,8 +2,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class MainTest {
-
-  @Test
+  
+ @Test
   public void testOddPos() {
     String[] arr = {"5", "2", "1", "4", "3"};
     Assert.assertEquals("3", (new Main()).median(arr));
@@ -43,5 +43,4 @@ public class MainTest {
   public void testWrong() {
     String[] arr = {"5", "4", "kek", "-5"};
     Assert.assertEquals("You wrote not a number!", (new Main()).median(arr));
-  }
 }
