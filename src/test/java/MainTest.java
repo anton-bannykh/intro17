@@ -40,4 +40,4 @@ public class MainTest {
       int[] arr = {1, 2, 3, 4, 5, 7};
       assertEquals(68, (new Main()).sum_of_mul(arr));
     }
- -}
+ }
