@@ -1,6 +1,9 @@
 import java.util.Scanner;
 
 public class Main {
+  /**
+   * @param args
+   */
   public static void main(String[] args) {
     Scanner scn = new Scanner(System.in);
     int len = scn.nextInt();
@@ -15,6 +18,11 @@ public class Main {
     }
   }
 
+  /**
+   *
+   * @param mas
+   * @return boolean
+   */
   public static boolean foo(int[] mas) {
     int sum = 0;
     for (int cnt = 0; cnt < mas.length; cnt++) {
