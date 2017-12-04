@@ -10,8 +10,7 @@ public class Main {
     }
     if (foo(mas)) {
       System.out.println("Yes");
-    }
-    else {
+    } else {
       System.out.println("No");
     }
   }
