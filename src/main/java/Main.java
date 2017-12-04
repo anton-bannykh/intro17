@@ -3,7 +3,7 @@ public class Main {
     return 10;
   }
 
-  public int sumOfMul(int[] arr) {
+  int sumOfMul(int[] arr) {
     int ans = 0;
     for (int i = 0; i < arr.length; i += 2) {
       ans = arr[i] * arr[i + 1];
