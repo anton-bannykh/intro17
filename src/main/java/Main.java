@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
   /**
-   * @param args
+   * @param args Array of strings given from console
    */
   public static void main(String[] args) {
     Scanner scn = new Scanner(System.in);
@@ -19,9 +19,8 @@ public class Main {
   }
 
   /**
-   *
-   * @param mas
-   * @return boolean
+   * @param mas Array of integers
+   * @return boolean True if sum of integers is even
    */
   public static boolean foo(int[] mas) {
     int sum = 0;
