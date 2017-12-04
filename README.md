@@ -1,4 +1,4 @@
-[![Build status](https://travis-ci.org/anton-bannykh/playground.svg?branch=master)](https://travis-ci.org/anton-bannykh/playground)
+[![Build status](https://travis-ci.org/anton-bannykh/intro17.svg?branch=master)](https://travis-ci.org/anton-bannykh/intro17)
 
 # Описание
 
@@ -29,7 +29,7 @@
   * Модифицируйте `build.gradle` таким образом, чтобы одним из артефактов являлся исполняемый `.jar` файл
   * Создайте pull-request.
 5. Dependency injection
-  * Создайте issue для получения варинта задания.
+  * Создайте issue для получения варианта задания.
   * При помощи библиотеки [Guice] избавьтесь от зависимости кода, содержащего `main` на код алгоритма.
   * Выполните задание.
   * Разработайте тесты.
