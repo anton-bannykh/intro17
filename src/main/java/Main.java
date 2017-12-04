@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class Main {
   public static void main(String[] args) {
-    Scanner sc = new Scanner(System.in);
-    int n = sc.nextInt();
-    int[] mas = new int[n];
-    for (int i = 0; i < n; i++) {
-      mas[i] = sc.nextInt();
+    Scanner scn = new Scanner(System.in);
+    int len = scn.nextInt();
+    int[] mas = new int[len];
+    for (int i = 0; i < len; i++) {
+      mas[i] = scn.nextInt();
     }
     if (foo(mas)) {
       System.out.println("Yes");
@@ -14,11 +14,12 @@ public class Main {
       System.out.println("No");
     }
   }
+
   public static boolean foo(int[] mas) {
-    int s = 0;
-    for (int i = 0; i < mas.length; i++) {
-      s ^= mas[i];
+    int sum = 0;
+    for (int cnt = 0; cnt < mas.length; cnt++) {
+      sum ^= mas[cnt];
     }
-    return ((s & 1) == 0);
+    return ((sum & 1) == 0);
   }
 }
