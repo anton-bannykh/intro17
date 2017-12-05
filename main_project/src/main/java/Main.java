@@ -1,25 +1,29 @@
 import java.util.Arrays;
 
 public class Main {
-
+  /**
+   *Main method what resolve algorithm
+   *
+   * @author Valery
+   *
+   * @version 1.0
+   */
   public static void main(String[] args) {
-    System.out.println(median(args));
+    if (args.length == 0) {
+      System.out.println(0);
+    } else {
+      Console console = new Console();
+      int[] arr = console.parse(args);
+      System.out.println(median(arr));
+    }
   }
 
-  static String median(String[] args) {
-    int[] arr = new int[args.length];
-    for (int i = 0; i < args.length; ++i) {
-      try {
-        arr[i] = Integer.parseInt(args[i]);
-      } catch (NumberFormatException exc) {
-        return ("You wrote not a number!");
-      }
-    }
+  static String median(int[] arr) {
 
     Arrays.sort(arr);
     int len = arr.length;
     if (len == 0) {
-      return String.valueOf(0);
+      return "";
     }
     if (len % 2 == 1) {
       return String.valueOf(arr[len / 2]);

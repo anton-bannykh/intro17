@@ -1,0 +1,9 @@
+version = '1.0'
+
+dependencies {
+    compile project(":console_project")
+}
+
+jar {
+    manifest.attributes("Main-Class": "Main");
+}

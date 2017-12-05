@@ -1,2 +1,3 @@
 rootProject.name = 'intro17'
 
+include 'main_project', 'console_project'
