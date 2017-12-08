@@ -1,2 +1,4 @@
-rootProject.name = 'intro17'
+include 'algo'
+include 'util'
 
+rootProject.name = 'intro17'
