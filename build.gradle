@@ -3,6 +3,7 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'checkstyle'
+apply plugin: 'application' 
 
 checkstyle {
   config = resources.text.fromArchiveEntry(configurations.checkstyle.filter { it.name.contains 'checkstyle' },
@@ -13,10 +14,14 @@ checkstyle {
 
 sourceCompatibility = 1.8
 
+mainClassName = 'Main' 
+
 repositories {
   mavenCentral()
 }
 
 dependencies {
+  compile project(':algo')
+  compile project(':util')
   testCompile group: 'junit', name: 'junit', version: '4.12'
 }
