@@ -1,2 +1,5 @@
+out/
+.idea/
+intro17.iml
 build/
 .gradle/
