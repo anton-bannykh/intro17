@@ -20,6 +20,17 @@ public class MainTest {
   }
 
   @Test
+  public void testIncorrectInput() {
+    assertEquals("Неверный формат входных данных",
+            Main.sumOfPower5(new String[]{"1", "2", "error", "4"}));
+  }
+
+  @Test
+  public void testCorrectInput() {
+    assertEquals("31", Main.sumOfPower5(new String[]{"1", "2", "0"}));
+  }
+
+  @Test
   public void testSingleNumber() {
     assertEquals(25, Main.sumOfPower5(new int[]{2}));
   }
