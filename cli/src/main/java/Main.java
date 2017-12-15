@@ -1,26 +1,15 @@
 public class Main {
-  int foo() {
-    return 10;
-  }
-  
-  static int sum(int[] arr) {
-    int ans = 0;
-    for (int i = 0; i < arr.length; i++) {
-      ans += arr[i];
-    }
-    return ans;
-  }
-
-  static String getSumOrError(String[] args) {
+  static int[] parseArgs(String[] args) {
     int[] nums = new int[args.length];
     for (int i = 0; i < args.length; i++) {
       try {
         nums[i] = Integer.parseInt(args[i]);
       } catch (NumberFormatException exc) {
-        return String.format("Cannot parse integer at position %d", i);
+        System.out.println(String.format("Cannot parse integer at position %d", i));
+        return new int[0];
       }
     }
-    return Integer.toString(sum(nums));
+    return nums;
   }
 
   /**
@@ -29,6 +18,11 @@ public class Main {
    * @param args Numbers to sum
   **/
   public static void main(String[] args) {
-    System.out.println(getSumOrError(args));
+    int[] nums = parseArgs(args);
+    if (args.length > 0 && nums.length == 0) {
+      return;
+    }
+    Sum sum = new Sum();
+    System.out.println(sum.sum(nums));
   }
 }
