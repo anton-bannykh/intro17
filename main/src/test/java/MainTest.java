@@ -58,27 +58,4 @@ public class MainTest {
     int[] arr = {215784, -298404, 73872, -39852, 104328, 118584, -6480};
     assertEquals(324, (new Main()).nekogcd(arr));
   }
-
-  @Test
-  public void testConsoleInput1_allok() {
-    String[] testArray = "215784 -298404 73872 -39852 104328 118584 -6480".split(" ");
-    assertEquals("324", (new Main()).nekoConsoleGcd(testArray));
-  }
-
-  @Test
-  public void testConsoleInput2_empty() {
-    assertEquals("2147483647", (new Main()).nekoConsoleGcd(new String[0]));
-  }
-
-  @Test
-  public void testConsoleInput3_zeros() {
-    assertEquals("2147483647", (new Main()).nekoConsoleGcd("0 00 0000 0 00".split(" ")));
-  }
-
-  @Test
-  public void testConsoleInput4_wronginput() {
-    String[] testArray = "abc 123f fff3 .lk".split(" ");
-    String expectedAnswer = "Infernal error: wrong input: For input string: \"abc\". Ochen zhal.";
-    assertEquals(expectedAnswer, (new Main()).nekoConsoleGcd(testArray));
-  }
 }
