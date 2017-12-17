@@ -1,10 +1,11 @@
 public class Main {
 
-  /*
-  @param number number to count zeroes in
-  @return       amount of zeroes in given number
+  /**
+  * counts amount of zeroes in a given number.
+  * @param number number to count zeroes in
+  * @return       amount of zeroes in given number
   */
-  int countZeroes(int number) {
+  public static int countZeroes(int number) {
     if (number == 0) {
       return 1;
     }
@@ -21,17 +22,38 @@ public class Main {
     return result;
   }
 
-  /*
-  @param array array of integers
-  @return      total amount of zeroes in numbers in the given array
+  /**
+  * task solution.
+  * @param input array of strings
+  * @return      total amount of zeroes in numbers in the given array
   */
-  int countTotalZeroes(int[] arr) {
-    int total = 0;
+  public static String countTotalZeroes(String[] input) {
+    int[] arr = new int[input.length];
 
+    for (int i = 0; i < input.length; i++) {
+      try {
+        arr[i] = Integer.parseInt(input[i]);
+      } catch (NumberFormatException ex) {
+        return ("Error: \"" + input[i] + "\" is not a number");
+      }
+    }
+
+    int total = 0;
     for (int i = 0; i < arr.length; i++) {
       total += countZeroes(arr[i]);
     }
 
-    return total;
+    return String.valueOf(total);
+  }
+
+  /**
+  * program's main class.
+  * @param args console string arguments
+  */
+  public static void main(String[] args) {
+    String result = countTotalZeroes(args);
+    System.out.println(result);
+
+    return;
   }
 }
