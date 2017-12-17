@@ -1,3 +1,5 @@
+package ru.nsychev.intro17.sum;
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
