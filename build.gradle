@@ -23,3 +23,15 @@ subprojects {
 	  testCompile group: 'junit', name: 'junit', version: '4.12'
 	}
 }
+
+subprojects.each { subproject -> evaluationDependsOn(subproject.path)}
+
+task allJar(type: Jar, dependsOn: subprojects.assemble) {
+   baseName = 'nekoGcdCounter'
+   manifest.attributes("Main-Class": "Main");
+   subprojects.each { subproject -> 
+      from subproject.configurations.archives.allArtifacts.files.collect {
+         zipTree(it)
+       }
+    }
+ }
