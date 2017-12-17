@@ -5,6 +5,12 @@ dependencies {
 }
 
 jar {
-  manifest.attributes("Main-Class": "Main");
+  manifest {
+    attributes 'Main-Class': 'ru.nsychev.intro17.cli.Main'
+  }
+
+  from {
+    configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+  }
 }
 
