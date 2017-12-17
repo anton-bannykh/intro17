@@ -14,7 +14,7 @@ public class MainTest {
 
   @Test
   public void testSumZero() {
-    Assert.assertEquals(0, Main.sumTrailingZeros(new int[] {7, 15, 127}));
+    Assert.assertEquals(0, Main.sumTrailingZeros(new int[] {0, 7, 15, 127}));
   }
 
   @Test
@@ -25,5 +25,17 @@ public class MainTest {
   @Test
   public void testSumZero2() {
     Assert.assertEquals(0, Main.sumTrailingZeros(new int[] {3, 31, 63, 255}));
+  }
+
+  static final String ERROR_TEXT = "Some elements are not integer";
+
+  @Test
+  public void testSumString() {
+    Assert.assertEquals("7", Main.sumOrError(new String[] {"8", "10", "11", "12", "13", "14"}));
+  }
+
+  @Test
+  public void testSumError() {
+    Assert.assertEquals(ERROR_TEXT, Main.sumOrError(new String[] {"7", "8", "9", "a"}));
   }
 }
