@@ -1,25 +1,32 @@
 group 'intro17'
 version '1.0-SNAPSHOT'
 
-subprojects {
+apply plugin: "java"
+apply plugin: 'checkstyle' 
 
-  apply plugin: "java"
-  apply plugin: 'checkstyle'
+checkstyle {
+  config = resources.text.fromArchiveEntry(configurations.checkstyle.filter { it.name.contains 'checkstyle' },
+          'google_checks.xml')
+  maxWarnings = 0
+  maxErrors = 0
+}
 
-  checkstyle {
-    config = resources.text.fromArchiveEntry(configurations.checkstyle.filter { it.name.contains 'checkstyle' },
-            'google_checks.xml')
-    maxWarnings = 0
-    maxErrors = 0
-  }
+sourceCompatibility = 1.8
 
-  sourceCompatibility = 1.8
+repositories {
+  mavenCentral()
+}
+  
+task Jar(type: Jar) {
+   manifest {
+       attributes 'Main-Class': 'Main'
+   }
+   baseName = project.name + '-all'
+   from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+   with jar
+}
 
-  repositories {
-    mavenCentral()
-  }
-
-  dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-  }
+dependencies {
+  compile project(':main_project')
+  testCompile group: 'junit', name: 'junit', version: '4.12'
 }
