@@ -21,4 +21,15 @@ public class MainTest {
     assertEquals(7, Main.sumLowestBits(new int[] {10, -12, 3}));
     assertEquals(10, Main.sumLowestBits(new int[] {-101, 1, 0, -12, 4}));
   }
+
+  @Test
+  public void testSumString() {
+    assertEquals("4", Main.getSumOrError(new String[] {"1", "-2", "3"}));
+  }
+
+  @Test
+  public void testSumError() {
+    assertEquals("Your array is incorrect", Main.getSumOrError(new String[] {"23", "-gs", "3"}));
+    assertEquals("Your array is incorrect", Main.getSumOrError(new String[] {"2", "-2", "3kek"}));
+  }
 }
