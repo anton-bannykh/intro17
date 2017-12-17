@@ -20,6 +20,15 @@ repositories {
   mavenCentral()
 }
 
+task makeJar(type: Jar) {
+	manifest {
+        attributes 'Main-Class': 'Main'
+    }
+    baseName = project.name + '-all'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
 dependencies {
   compile project(':algo')
   compile project(':util')
