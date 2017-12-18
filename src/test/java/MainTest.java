@@ -40,4 +40,46 @@ public class MainTest {
         2147483646, -2147483646, 2147483645, -2147483645, 2147483644, -2147483644, 2147483643,
         -2147483643, 2147483642}));
   }
+
+  @Test
+  public void testCorrectInput1() {
+    Assert.assertEquals(false, (new Main()).get_args(new int[3], new String[]{"1", "4", "ups"}));
+  }
+
+  @Test
+  public void testCorrectInput2() {
+    Assert.assertEquals(true, (new Main()).get_args(new int[3], new String[]{"1", "4", "3"}));
+  }
+
+  @Test
+  public void testCorrectInput3() {
+    Assert.assertEquals(true, (new Main()).get_args(new int[12], new String[]{"-2147483648",
+        "2147483647", "-2147483647", "2147483646", "-2147483646", "2147483645", "-2147483645",
+        "2147483644", "-2147483644", "2147483643", "-2147483643", "2147483642"}));
+  }
+
+  @Test
+  public void testCorrectInput4() {
+    Assert.assertEquals(false, (new Main()).get_args(new int[12], new String[]{"-2147483648",
+        "2147483647", "-2147483647", "2147483646", "-2147483646", "2147483645", "-2I47483645",
+        "2147483644", "-2147483644", "2147483643", "-2147483643", "2147483642"}));
+  }
+
+  @Test
+  public void testCorrectInput5() {
+    Assert.assertEquals(false, (new Main()).get_args(new int[12], new String[]{"-2147483648",
+        "2147483647", "--2147483647", "2147483646", "-2147483646", "2147483645", "-2147483645",
+        "2147483644", "-2147483644", "2147483643", "-2147483643", "2147483642"}));
+  }
+  @Test
+  public void testCorrectInput6() {
+    Assert.assertEquals(true, (new Main()).get_args(new int[12], new String[]{"-2147483648",
+        "2147483647", "+2147483647", "2147483646", "-2147483646", "2147483645", "-2147483645",
+        "2147483644", "-2147483644", "2147483643", "-2147483643", "2147483642"}));
+  }
+
+  @Test
+  public void testCorrectInput7() {
+    Assert.assertEquals(true, (new Main()).get_args(new int[0], new String[0]));
+  }
 }
