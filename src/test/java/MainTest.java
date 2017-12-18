@@ -26,7 +26,6 @@ public class MainTest {
 
   @Test
   public void testChain5() {
-    new Main();
     Assert.assertEquals(3.0 + 1.0 / 3, (new Main()).chainFrac(new int[]{3, 2, 1}), 0);
   }
 
