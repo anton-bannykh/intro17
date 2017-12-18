@@ -51,4 +51,10 @@ public class MainTest {
     int[] arr = {Integer.MAX_VALUE, Integer.MIN_VALUE};
     assertEquals(-1, (new Main()).xor(arr));
   }
+
+  @Test
+  public void testNotNumbers() {
+    String[] arr = {"Hi!", "I", "am", "a", "bad", "example", "of", "input"};
+    assertEquals("Incorrect input data", (new Main()).parse(arr));
+  }
 }
