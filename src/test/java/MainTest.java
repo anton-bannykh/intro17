@@ -25,13 +25,13 @@ public class MainTest {
   @Test
   public void testOverflow1() {
     Assert.assertEquals(false, (new Main()).foo(new int[]{2147483647, 2147483646,
-            2147483645, 2147483644, 2147483643, 2147483642}));
+        2147483645, 2147483644, 2147483643, 2147483642}));
   }
 
   @Test
   public void testOverflow2() {
     Assert.assertEquals(false, (new Main()).foo(new int[]{-2147483648, -2147483647,
-            -2147483646, -2147483645, -2147483644, -2147483643}));
+        -2147483646, -2147483645, -2147483644, -2147483643}));
   }
 
   @Test
