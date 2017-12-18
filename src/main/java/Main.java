@@ -7,7 +7,7 @@ public class Main {
     for (int i = 0; i < args.length; i++) {
       try {
         mas[i] = Integer.parseInt(args[i]);
-      } catch (Exception e) {
+      } catch (Exception exception) {
         return false;
       }
     }
