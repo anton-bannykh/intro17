@@ -1,17 +1,27 @@
-import java.util.Scanner;
-
 public class Main {
+  /**
+   * @param mas Array of integers.
+   * @param args Array of arguments from command line.
+   */
+  public static boolean get_args(int[] mas, String[] args) {
+    for (int i = 0; i < args.length; i++) {
+      try {
+        mas[i] = Integer.parseInt(args[i]);
+      } catch (Exception e) {
+        return false;
+      }
+    }
+    return true;
+  }
+
   /**
    * @param args Array of strings given from console.
    */
   public static void main(String[] args) {
-    Scanner scn = new Scanner(System.in);
-    int len = scn.nextInt();
-    int[] mas = new int[len];
-    for (int i = 0; i < len; i++) {
-      mas[i] = scn.nextInt();
-    }
-    if (foo(mas)) {
+    int[] mas = new int[args.length];
+    if (get_args(mas, args) == false) {
+      System.out.println("Wrong input data!");
+    } else if (foo(mas)) {
       System.out.println("Yes");
     } else {
       System.out.println("No");
