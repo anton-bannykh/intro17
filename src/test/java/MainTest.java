@@ -6,6 +6,7 @@ public class MainTest {
   public void testFoo() {
     Assert.assertEquals(10, (new Main()).foo());
   }
+  
   @Test
   public void testSumOfBits() {
     Assert.assertEquals(0, Main.sumOfBits(new int[] {0, 0}));
