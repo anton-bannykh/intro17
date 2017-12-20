@@ -18,4 +18,13 @@ public class MainTest {
     int[] nullArray = new int[0];
     Assert.assertEquals(Integer.MAX_VALUE, (new Main()).getMin(nullArray));
   }
+
+  @Test
+  public void testBadSysFormat() {
+    String[] curTest = new String[3];
+    curTest[0] = new String("123");
+    curTest[1] = new String("ROFL");
+    curTest[2] = new String("14");
+    Assert.assertEquals("ROFL is not a number", (new Main().printMinOrError(curTest)));
+  }
 }
