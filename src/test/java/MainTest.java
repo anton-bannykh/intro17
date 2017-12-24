@@ -17,6 +17,7 @@ public class MainTest {
   @Test
   public void testChain3() {
     Assert.assertEquals(3.4, (new Main()).chainFrac(new int[]{3, 2, 2}), delta);
+
   }
 
   @Test
