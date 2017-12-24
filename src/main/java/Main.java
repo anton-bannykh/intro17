@@ -8,7 +8,7 @@ public class Main {
             try {
                 input[i] = Integer.parseInt(args[i]);
             } catch (NumberFormatException error) {
-                return String.format("Infernal error: string %d not a number", i);
+                return String.format("Infernal error: string number %d not a number", i);
             }
         }
         return Integer.toString(rangeOr(input));
