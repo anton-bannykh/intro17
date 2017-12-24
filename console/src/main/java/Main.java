@@ -1,10 +1,14 @@
+package arimon.intro17.console;
+
+import arimon.intro17.summul.SumMul;
+
 public class Main {
   
   public static void main(String[] args) {
-    System.out.println(sumOfMul(args));
+    System.out.println(check(args));
   }
   
-  static String sumOfMul(String[] args) {
+  static String check(String[] args) {
     int[] arr = new int[args.length];
     for (int i = 0; i < args.length; i++) {
       try {
@@ -13,13 +17,6 @@ public class Main {
         return ("Incorrect input: one of the arguments is not int");
       }
     }
-    int ans = 0;
-    for (int i = 1; i < arr.length; i += 2) {
-      ans += arr[i] * arr[i - 1];
-    }
-    if (arr.length % 2 == 1) {
-      ans += arr[arr.length - 1];
-    }
-    return Integer.toString(ans);
+    return SumMul.sumOfMul(arr);
   }
 }

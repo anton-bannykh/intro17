@@ -1,0 +1,16 @@
+version = "1.1"
+
+dependencies {
+  compile project(":summul")
+}
+
+jar {
+  manifest {
+    attributes 'Main-Class': 'arimon.intro17.console.Main'
+  }
+
+  from {
+    configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+  }
+}
+ 
