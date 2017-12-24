@@ -19,4 +19,16 @@ public class MainTest {
     int [] arr = {1, 3};
     Assert.assertEquals(3, (new Main()).rangeOr(arr));
   }
+  public void testConsoleInput1_emptyInput() {
+    string [] arr = {};
+    Assert.assertEquals(0, (new Main()).consoleOr(arr));
+  }
+  public void testConsoleInput2_normalInput() {
+    string [] arr = {"1", "2"};
+    Assert.assertEquals(3, (new Main()).consoleOr(arr));
+  }
+  public void testConsoleInput3_wrongInput() {
+    string [] arr = {"1", "a"};
+    Assert.assertEquals("Infernal error: string number 1 not a number", (new Main()).consoleOr(arr));
+  }
 }
