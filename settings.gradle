@@ -1,2 +1,3 @@
-rootProject.name = 'test'
-
+rootProject.name = 'intro17'
+include 'main'
+include 'console'

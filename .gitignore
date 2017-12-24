@@ -1,4 +1,6 @@
 .gradle/
 .idea/
 intro17.iml
+console/out/
+main/out/
 out/
