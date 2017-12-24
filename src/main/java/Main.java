@@ -1,10 +1,7 @@
-public class Main {
+import Andryyr.intro17.parser.Parser;
 
-  int xor(int[] arr) {
-    int ans = 0;
-    for (int i = 0; i < arr.length; i++) {
-      ans ^= arr[i];
-    }
-    return ans;
+public class Main {
+  public static void main(String[] args) {
+    System.out.println(new Parser().parse(args));
   }
 }
