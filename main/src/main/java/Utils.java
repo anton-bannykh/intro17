@@ -6,7 +6,7 @@ public class Utils {
     for (int ind = 0; ind < str.length; ++ind) {
       array[ind] = Integer.parseInt(str[ind]);
     }
-  return array;
+    return array;
   }
 
   static int fibonacciSum(int[] array) {
