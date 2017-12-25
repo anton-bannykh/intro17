@@ -1,3 +1,4 @@
+import Xpech.intro17.algo.Algo;
 import Xpech.intro17.parser.Parser;
 
 public class Main {
@@ -7,7 +8,8 @@ public class Main {
    * @param args It's integers (maybe).
    */
   public static void main(String[] args) {
-    System.out.println(Parser.parse(args));
+    int[] parsedArgs = Parser.parse(args);
+    System.out.println(Algo.countZeroes(parsedArgs));
   }
 
 
