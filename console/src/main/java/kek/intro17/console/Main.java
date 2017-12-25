@@ -1,25 +1,18 @@
+package kek.intro17.console;
+
+import kek.intro17.sop.Sop;
+
 public class Main {
 
   public static void main(String[] args) {
-    System.out.println(sumOfPows(args));
-  }
-
-  // Method retruns sum of powers of 3
-  static int sumOfPows(int[] args) {
-    int sum = 0;
-    for (int a:args) {
-      if (a >= 0 && a <= 15) {
-        sum += Math.pow(3,a);
-      }
-    }
-    return sum;
+    System.out.println(parse(args));
   }
 
   /**
    * Method returns sum of powers of 3 if string is correct array
    * or "Zachem?" otherwise.
-  */
-  static String sumOfPows(String[] args) {
+   */
+  static String parse(String[] args) {
     int[] arr = new int[args.length];
 
     for (int i = 0;i < arr.length; i++) {
@@ -30,6 +23,6 @@ public class Main {
       }
     }
 
-    return Integer.toString(sumOfPows(arr));
+    return Integer.toString(Sop.sumOfPows(arr));
   }
 }
