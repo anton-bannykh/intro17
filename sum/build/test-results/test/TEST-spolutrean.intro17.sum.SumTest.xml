@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="spolutrean.intro17.sum.SumTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2017-12-25T08:21:53" hostname="LAPTOP-BT42LS78" time="0.015">
+  <properties/>
+  <testcase name="testPermutation" classname="spolutrean.intro17.sum.SumTest" time="0.006"/>
+  <testcase name="testSingleNumber" classname="spolutrean.intro17.sum.SumTest" time="0.001"/>
+  <testcase name="testSomeEqualNumbers" classname="spolutrean.intro17.sum.SumTest" time="0.0"/>
+  <testcase name="testEmpty" classname="spolutrean.intro17.sum.SumTest" time="0.001"/>
+  <testcase name="testOnes" classname="spolutrean.intro17.sum.SumTest" time="0.0"/>
+  <testcase name="testZeroes" classname="spolutrean.intro17.sum.SumTest" time="0.001"/>
+  <testcase name="testSomeMumbers" classname="spolutrean.intro17.sum.SumTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
