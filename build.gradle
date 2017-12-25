@@ -11,6 +11,15 @@ checkstyle {
   maxErrors = 0
 }
 
+task fatJar(type: Jar) {
+  manifest {
+    attributes 'Main-Class': 'Main'
+  }
+  baseName = project.name + '-all'
+  from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+  with jar
+}
+
 sourceCompatibility = 1.8
 
 repositories {

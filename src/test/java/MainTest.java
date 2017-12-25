@@ -1,35 +1,38 @@
-import static org.junit.Assert.assertEquals;
-
+import getsumbits.GetSumBits;
+import org.junit.Assert;
 import org.junit.Test;
+import parsestring.ParseString;
 
 public class MainTest {
   @Test
   public void testSum() {
-    assertEquals(4, Main.sumLowestBits(new int[] {1, 2, 3}));
-    assertEquals(7, Main.sumLowestBits(new int[] {10, 12, 3}));
-    assertEquals(10, Main.sumLowestBits(new int[] {101, 1, 0, 12, 4}));
+    Assert.assertEquals(4, GetSumBits.sumLowestBits(new int[] {1, 2, 3}));
+    Assert.assertEquals(7, GetSumBits.sumLowestBits(new int[] {10, 12, 3}));
+    Assert.assertEquals(10, GetSumBits.sumLowestBits(new int[] {101, 1, 0, 12, 4}));
   }
 
   @Test
   public void testSumEmpty() {
-    assertEquals(0, Main.sumLowestBits(new int[] {}));
+    Assert.assertEquals(0, GetSumBits.sumLowestBits(new int[] {}));
   }
 
   @Test
   public void testSumNegative() {
-    assertEquals(4, Main.sumLowestBits(new int[] {-1, 2, -3}));
-    assertEquals(7, Main.sumLowestBits(new int[] {10, -12, 3}));
-    assertEquals(10, Main.sumLowestBits(new int[] {-101, 1, 0, -12, 4}));
+    Assert.assertEquals(4, GetSumBits.sumLowestBits(new int[] {-1, 2, -3}));
+    Assert.assertEquals(7, GetSumBits.sumLowestBits(new int[] {10, -12, 3}));
+    Assert.assertEquals(10, GetSumBits.sumLowestBits(new int[] {-101, 1, 0, -12, 4}));
   }
+
+  int[] current = new int[3];
 
   @Test
   public void testSumString() {
-    assertEquals("4", Main.getSumOrError(new String[] {"1", "-2", "3"}));
+    Assert.assertEquals(true, ParseString.getNums(current, new String[] {"1", "-2", "3"}));
   }
 
   @Test
   public void testSumError() {
-    assertEquals("Your array is incorrect", Main.getSumOrError(new String[] {"23", "-gs", "3"}));
-    assertEquals("Your array is incorrect", Main.getSumOrError(new String[] {"2", "-2", "3kek"}));
+    Assert.assertEquals(false, ParseString.getNums(current, new String[] {"23", "-gs", "3"}));
+    Assert.assertEquals(false, ParseString.getNums(current, new String[] {"2", "-2", "3kek"}));
   }
 }
