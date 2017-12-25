@@ -16,4 +16,13 @@ public class MainTest {
     System.out.println((new Main()).partSum(array));
     Assert.assertEquals(3.0, (new Main()).partSum(array), 0.0);
   }
+
+  @Test
+  public void testFalse() {
+    String[] array = new String[3];
+    array[0] = new String("1");
+    array[1] = new String("Kek");
+    array[2] = new String("1");
+    Assert.assertEquals("Kek is not a number", (new Main().checkError(array)));
+  }
 }
