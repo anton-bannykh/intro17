@@ -1,26 +1,16 @@
+import getsumbits.GetSumBits;
+import parsestring.ParseString;
+
 public class Main {
-
-  static int sumLowestBits(int[] arr) {
-    int ans = 0;
-    for (int i = 0; i < arr.length; i++) {
-      ans += Integer.lowestOneBit(arr[i]);
-    }
-    return ans;
-  }
-
-  static String getSumOrError(String[] args) {
-    int[] nums = new int[args.length];
-    for (int i = 0; i < args.length; ++i) {
-      try {
-        nums[i] = Integer.parseInt(args[i]);
-      } catch (NumberFormatException exc) {
-        return String.format("Your array is incorrect");
-      }
-    }
-    return Integer.toString(sumLowestBits(nums));
-  }
-
+  /**
+  * @param args Array of strings given from console.
+  */
   public static void main(String[] args) {
-    System.out.println(getSumOrError(args));
+    int[] nums = new int[args.length];
+    if (ParseString.getNums(nums, args) == false) {
+      System.out.println("Your array is incorrect");
+    } else {
+      System.out.println(GetSumBits.sumLowestBits(nums));
+    }
   }
 }
