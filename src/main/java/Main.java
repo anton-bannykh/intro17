@@ -1,5 +1,10 @@
 public class Main {
-  int foo() {
-    return 10;
+  int foo(int[] ms) {
+    int sum=0;
+    for (int i = 0; i < ms.length; i++)
+	{
+		sum += ms[i];
+	}
+	return sum;
   }
 }
