@@ -2,27 +2,17 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class MainTest {
+  /**
+   *tests.
+  **/  
   @Test
-  public void testFoo() {
-    Assert.assertEquals(10, (new Main()).foo());
+  public void simpleTest1() {
+    Assert.assertEquals("4.0", Main.doit(new String[]{"1", "1", "1", "1"}));
   }
 
   @Test
-  public void testOk() {
-    double[] array = new double[3];
-    array[0] = 1.0;
-    array[1] = 1.0;
-    array[2] = 1.0;
-    System.out.println((new Main()).partSum(array));
-    Assert.assertEquals(3.0, (new Main()).partSum(array), 0.0);
+  public void testCorrectInput1() {
+    Assert.assertEquals("Wrong input data!", Main.doit(new String[]{"1", "4", "ups"}));
   }
 
-  @Test
-  public void testFalse() {
-    String[] array = new String[3];
-    array[0] = new String("1");
-    array[1] = new String("Kek");
-    array[2] = new String("1");
-    Assert.assertEquals("Kek is not a number", (new Main().checkError(array)));
-  }
 }

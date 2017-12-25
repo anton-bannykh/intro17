@@ -1,2 +1,6 @@
 rootProject.name = 'intro17'
 
+include 'argstoarray'
+include 'partsum'
+
+
