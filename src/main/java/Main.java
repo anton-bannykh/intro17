@@ -24,7 +24,7 @@ public class Main {
   }
 
   public static void main(String[] ar) {
-    checkError(ar);    
+    System.out.println(checkError(ar));    
   }
 
 }
