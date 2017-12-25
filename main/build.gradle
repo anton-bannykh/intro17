@@ -1,0 +1,17 @@
+version = '1.0'
+
+apply plugin: "java"
+
+dependencies {
+    compile project("countzeroes")
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'intro17.main.Main'
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
