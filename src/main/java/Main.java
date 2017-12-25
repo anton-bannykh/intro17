@@ -5,12 +5,12 @@ public class Main {
   /**
    *main func.
   **/
-  public static void main(String[] args) {
+  public static String doit(String[] args) {
     double[] mas = new double[args.length];
     if (ArgsToArray.get_args(mas, args) == false) {
-      System.out.println("Wrong input data!");
-    } else { 
-      System.out.println(PartSum.part(mas));
+      return "Wrong input data!";
     }
+    double ans = PartSum.part(mas);
+    return Double.toString(ans);
   }
 }
