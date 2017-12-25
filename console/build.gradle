@@ -1,0 +1,15 @@
+version = '1.0'
+
+dependencies {
+   compile project(":sop")
+ }
+
+ jar {
+   manifest {
+     attributes 'Main-Class': 'kek.intro17.console.Main'
+   }
+
+   from {
+     configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+   }
+ }
