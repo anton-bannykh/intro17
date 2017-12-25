@@ -26,11 +26,4 @@ public class MainTest {
   public void testFun5() {
     Assert.assertEquals(10, (new Main()).fun(new int[] {10, 10, 10, 10, 10, 10, 10, 10, 10, 10}));
   }
-
-  @Test
-  public void testFun6() {
-    Assert.assertEquals(1, (new Main()).fun(new int[] {1, 2,3,4,5,6,30,239,228}));
-  }
 }
-
-
