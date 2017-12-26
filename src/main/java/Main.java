@@ -23,6 +23,7 @@ public class Main {
     }
     return getSum(ourArgs);
   }
+  
   /**
     *calculates sum of given array.
     *checks for incorrect imput.
