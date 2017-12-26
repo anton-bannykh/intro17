@@ -4,8 +4,8 @@ import org.junit.Test;
 public class MainTest {
 
   @Test
-  public void testSum() {
-    Assert.assertEquals("4", Main.getArgs(new int[] {2, 2}));
+  public void testSumString() {
+    Assert.assertEquals("4", Main.getArgs(new String[] {"2", "2"}));
     Assert.assertEquals("15", Main.getArgs(new String[] {"1", "2", "2", "10"}));
   }
 
