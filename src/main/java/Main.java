@@ -1,9 +1,5 @@
 public class Main {
-/**
- *calculate sum of given array.
- *checks for incorrect imput.
- */
-
+  
   static String getSum(int[] arr) {
     if (arr.length == 0) {
       return "Imput is empty";
@@ -27,6 +23,11 @@ public class Main {
     }
     return getSum(ourArgs);
   }
+  /**
+    *calculates sum of given array.
+    *checks for incorrect imput.
+  **/
+
 
   public static void main(String[] args) {
     System.out.println(getArgs(args));    
