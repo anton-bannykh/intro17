@@ -1,10 +1,10 @@
-package Yar.intro17.Console;
+package yz.intro17.console;
 
-import Yar.intro17.Yaroslav239.yaroslav239;
+import static yz.intro17.yaroslav239.Yaroslav239.fun;
 
-public class console {
+public class Console {
   public static void main(String[] in) {
-    System.out.println(yaroslav239.fun(strToInt(in)));
+    System.out.println(fun(strToInt(in)));
   }
 
   static int[] strToInt(String[] arr) {
