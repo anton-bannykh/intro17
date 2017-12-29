@@ -1,8 +1,9 @@
 group 'intro17'
-version '1.0-SNAPSHOT'
+version '0.1'
 
 apply plugin: 'java'
 apply plugin: 'checkstyle'
+apply plugin: 'application'
 
 checkstyle {
   config = resources.text.fromArchiveEntry(configurations.checkstyle.filter { it.name.contains 'checkstyle' },
@@ -19,4 +20,17 @@ repositories {
 
 dependencies {
   testCompile group: 'junit', name: 'junit', version: '4.12'
+  compile project(":parser")
+  compile project(":algo")
+}
+
+mainClassName = 'Main'
+
+task makeJar(type: Jar) {
+  manifest{
+    attributes 'Main-Class': 'Main'
+  }
+  baseName = 'CountZeroes'
+  from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+  with jar
 }
