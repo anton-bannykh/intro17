@@ -1,4 +1,4 @@
-public class Main {
+public class Console {
   public static void main(String[] args) {
     try {
       int sum = Utils.rangeOr(Utils.createArray(args));
