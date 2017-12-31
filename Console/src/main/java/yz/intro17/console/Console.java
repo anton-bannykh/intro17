@@ -1,13 +1,13 @@
 package yz.intro17.console;
 
-import static yz.intro17.yaroslav239.Yaroslav239.fun;
+import yz.intro17.yaroslav239.Yaroslav239;
 
 public class Console {
   public static void main(String[] in) {
-    System.out.println(fun(strToInt(in)));
+    System.out.println(Yaroslav239.fun(strToInt(in)));
   }
 
-  static int[] strToInt(String[] arr) {
+  private static int[] strToInt(String[] arr) {
     int[] ans = new int[arr.length];
     for (int i = 0; i < arr.length; i++) {
       try {
