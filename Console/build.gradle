@@ -1,0 +1,16 @@
+version = "1.0"
+
+dependencies {
+    compile project(":Yaroslav239")
+    //compile project(":Console")
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'yz.intro17.console.Console'
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
