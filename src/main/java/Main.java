@@ -1,5 +1,5 @@
-import argstoarray.ArgsToArray;
-import partsum.PartSum;
+import borat.intro17.algo.PartSum;
+import borat.intro17.parser.ArgsToArray;
 
 public class Main {
   /**
@@ -8,7 +8,7 @@ public class Main {
   public static void main(String[] args) {
     double[] mas = ArgsToArray.get(args);
     if (mas == null) {
-      System.out.println("Wrong input data!");
+      System.out.println("Wrong input data");
       return;
     }
     double ans = PartSum.part(mas);

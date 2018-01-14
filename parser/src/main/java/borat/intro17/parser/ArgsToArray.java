@@ -1,4 +1,4 @@
-package argstoarray;
+package borat.intro17.parser;
 
 public class ArgsToArray {
   /**
@@ -9,8 +9,9 @@ public class ArgsToArray {
     for (int i = 0; i < args.length; i++) {
       try {
         mas[i] = Double.parseDouble(args[i]);
-      } catch (Exception exception) {
-        return null;
+      } catch (NumberFormatException ex) {
+          System.out.println("Wrong input data");
+          return new double[]{};
       }
     }
     return mas;

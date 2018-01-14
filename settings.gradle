@@ -1,6 +1,3 @@
 rootProject.name = 'intro17'
-
-include 'argstoarray'
-include 'partsum'
-
-
+include ':algo'
+include ':parser'

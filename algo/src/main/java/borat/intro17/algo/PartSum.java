@@ -1,4 +1,4 @@
-package partsum;
+package borat.intro17.algo;
 
 public class PartSum {
   /**
