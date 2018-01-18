@@ -5,10 +5,12 @@
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="$PROJECT_DIR$/../../gradle/gradle-4.4.1" />
+        <option name="gradleHome" value="$PROJECT_DIR$/../../gradle-4.4.1" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/console" />
+            <option value="$PROJECT_DIR$/main" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />

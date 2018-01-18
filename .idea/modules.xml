@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/console/console.iml" filepath="$PROJECT_DIR$/.idea/modules/console/console.iml" group="console" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/console/console_main.iml" filepath="$PROJECT_DIR$/.idea/modules/console/console_main.iml" group="console" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/console/console_test.iml" filepath="$PROJECT_DIR$/.idea/modules/console/console_test.iml" group="console" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/intro17.iml" filepath="$PROJECT_DIR$/.idea/modules/intro17.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/intro17_main.iml" filepath="$PROJECT_DIR$/.idea/modules/intro17_main.iml" group="intro17" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/intro17_test.iml" filepath="$PROJECT_DIR$/.idea/modules/intro17_test.iml" group="intro17" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/main/main.iml" filepath="$PROJECT_DIR$/.idea/modules/main/main.iml" group="main" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/main/main_main.iml" filepath="$PROJECT_DIR$/.idea/modules/main/main_main.iml" group="main" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/main/main_test.iml" filepath="$PROJECT_DIR$/.idea/modules/main/main_test.iml" group="main" />
     </modules>
   </component>
 </project>
