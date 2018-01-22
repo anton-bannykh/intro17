@@ -3,6 +3,7 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'checkstyle'
+apply plugin: 'application'
 
 checkstyle {
   config = resources.text.fromArchiveEntry(configurations.checkstyle.filter { it.name.contains 'checkstyle' },
@@ -13,10 +14,23 @@ checkstyle {
 
 sourceCompatibility = 1.8
 
+mainClassName = 'Main'
+
 repositories {
   mavenCentral()
 }
 
 dependencies {
   testCompile group: 'junit', name: 'junit', version: '4.12'
+  compile project(":parser")
+  compile project(":sum")
+}
+
+task makeJar(type: Jar) {
+  manifest {
+    attributes 'Main-Class': 'Main'
+  }
+  baseName = 'sumHighestBitsOfArray'
+  from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+  with jar
 }
